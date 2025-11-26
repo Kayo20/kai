@@ -1,0 +1,24 @@
+import { Button } from '@/components/ui/button';
+
+export default function NotFoundPage() {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center" style={{ background: 'var(--color-bg-light)' }}>
+      <div className="space-y-6 max-w-md">
+        <div className="space-y-3">
+          <h1 className="text-8xl font-bold" style={{ color: 'var(--color-brand-primary)' }}>404</h1>
+          <h2 className="text-2xl font-semibold" style={{ color: 'var(--color-text-default)' }}>Page Not Found</h2>
+          <p style={{ color: 'var(--color-text-default)' }}>The page you're looking for doesn't exist or may have been moved.</p>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <Button asChild>
+            <a href="/">Return Home</a>
+          </Button>
+          <Button variant="outline" onClick={() => window.history.back()}>
+            Go Back
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
