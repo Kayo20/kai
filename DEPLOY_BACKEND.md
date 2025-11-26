@@ -15,7 +15,7 @@ Quick Start
    - Choose your repository and branch
 
 3. Build settings should auto-detect:
-   - Build command: `npm run build` (or `pnpm run build`)
+   - Build command: `npm run build`
    - Publish directory: `dist`
    - If not auto-detected, set these manually
 
