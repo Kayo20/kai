@@ -55,7 +55,7 @@ netlify dev
 Environment variables
 - Required keys (add these to Netlify Site settings → Build & deploy → Environment):
 
-  - `MAIL_HOST`: SMTP host (e.g. `smtp.postmarkapp.com`)
+  - `MAIL_HOST`: SMTP host (e.g. `your-smtp-host`)
   - `MAIL_PORT`: SMTP port (e.g. `587`)
   - `MAIL_USERNAME`: SMTP username
   - `MAIL_PASSWORD`: SMTP password
