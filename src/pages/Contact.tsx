@@ -14,6 +14,7 @@ function MsBookingsButton() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    let mounted = true;
     fetch('/.netlify/functions/ms-bookings')
       .then(async (res) => {
         const text = await res.text();
@@ -26,10 +27,15 @@ function MsBookingsButton() {
         return data;
       })
       .then((data) => {
+        if (!mounted) return;
         if (data && data.url) setUrl(data.url);
         else setError('MS Bookings URL not available');
       })
-      .catch((err) => setError(String(err.message || err)));
+      .catch((err) => {
+        if (!mounted) return;
+        setError(String(err.message || err));
+      });
+    return () => { mounted = false; };
   }, []);
 
   if (error) {

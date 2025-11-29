@@ -14,8 +14,7 @@ exports.handler = async function(event, context) {
   const token = process.env.WISE_API_TOKEN;
 
   if (!token) {
-    console.error('WISE_API_TOKEN not configured');
-    // Still allow a simple checkout link even without token
+    console.log('WISE_API_TOKEN not configured; using basic payment link');
   }
 
   if (!planName || !amount) {
@@ -23,7 +22,9 @@ exports.handler = async function(event, context) {
   }
 
   try {
-    const wiseLink = `https://wise.com/send?amount=${encodeURIComponent(amount)}&currency=${encodeURIComponent(currency)}`;
+    // Use Wise's direct payment/request money link format
+    // This creates a direct payment request that users can pay without login
+    const wiseLink = `https://wise.com/request-money?sourceAmount=${encodeURIComponent(amount)}&sourceCurrency=${encodeURIComponent(currency)}&targetCurrency=${encodeURIComponent(currency)}`;
     return { statusCode: 200, body: JSON.stringify({ success: true, url: wiseLink, planName, amount, currency }) };
   } catch (err) {
     console.error('wise checkout error', err);
