@@ -1,5 +1,25 @@
+import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
+
+function AnimatedCard({ index = 0, children }: { index?: number; children: React.ReactNode }) {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(true), index * 80 + 50);
+    return () => clearTimeout(t);
+  }, [index]);
+
+  return (
+    <div
+      className={`transform-gpu transition-all duration-500 ease-out ${
+        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+      }`}
+      style={{ willChange: 'opacity, transform' }}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function LegalPage() {
   const { t } = useLanguage();
@@ -21,7 +41,8 @@ export default function LegalPage() {
         {/* Terms Content */}
         <div className="space-y-6">
           {/* Intro card */}
-          <Card>
+          <AnimatedCard index={0}>
+            <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 56, height: 56, borderRadius: 28, background: 'linear-gradient(90deg,var(--color-brand-primary),var(--color-accent))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 700 }}>T</div>
@@ -37,9 +58,11 @@ export default function LegalPage() {
               </p>
             </CardContent>
           </Card>
+          </AnimatedCard>
 
           {/* 1. Acceptance of Terms */}
-          <Card>
+          <AnimatedCard index={1}>
+            <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>1</div>
@@ -52,9 +75,11 @@ export default function LegalPage() {
               </p>
             </CardContent>
           </Card>
+          </AnimatedCard>
 
           {/* 2. Accounts & Membership */}
-          <Card>
+          <AnimatedCard index={2}>
+            <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>2</div>
@@ -71,9 +96,11 @@ export default function LegalPage() {
               <p style={{ color: 'var(--color-text-default)' }}>We reserve the right to monitor, suspend, or delete accounts that violate these Terms or harm our reputation. Deleted accounts may not be re-registered.</p>
             </CardContent>
           </Card>
+          </AnimatedCard>
 
           {/* 3. Links to External Resources */}
-          <Card>
+          <AnimatedCard index={3}>
+            <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>3</div>
@@ -84,9 +111,11 @@ export default function LegalPage() {
               <p style={{ color: 'var(--color-text-default)' }}>Our Website may contain links to third-party websites or applications. Kai does not endorse, control, or assume responsibility for any third-party content, products, or services. You access external links at your own risk and are responsible for reviewing their policies and terms.</p>
             </CardContent>
           </Card>
+          </AnimatedCard>
 
           {/* 4. Prohibited Uses */}
-          <Card>
+          <AnimatedCard index={4}>
+            <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>4</div>
@@ -108,9 +137,11 @@ export default function LegalPage() {
               <p style={{ color: 'var(--color-text-default)' }}>We may restrict or terminate access for violating any of the above.</p>
             </CardContent>
           </Card>
+          </AnimatedCard>
 
           {/* 5. Intellectual Property Rights */}
-          <Card>
+          <AnimatedCard index={5}>
+            <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>5</div>
@@ -121,9 +152,11 @@ export default function LegalPage() {
               <p style={{ color: 'var(--color-text-default)' }}>All content, trademarks, logos, graphics, and materials displayed on the Website are owned by Kai or our licensors. Nothing in these Terms grants you the right to copy, reproduce, distribute, or use these materials without our written permission.</p>
             </CardContent>
           </Card>
+          </AnimatedCard>
 
           {/* 6. Indemnification */}
-          <Card>
+          <AnimatedCard index={6}>
+            <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>6</div>
@@ -134,9 +167,11 @@ export default function LegalPage() {
               <p style={{ color: 'var(--color-text-default)' }}>You agree to indemnify and hold harmless Kai, its employees, directors, partners, and affiliates from any claims, losses, damages, or expenses (including legal fees) arising from your use of the Website, your content, or your violation of these Terms.</p>
             </CardContent>
           </Card>
+          </AnimatedCard>
 
           {/* 7. Severability */}
-          <Card>
+          <AnimatedCard index={7}>
+            <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>7</div>
@@ -147,9 +182,11 @@ export default function LegalPage() {
               <p style={{ color: 'var(--color-text-default)' }}>If any part of these Terms is found to be unenforceable or invalid, the remaining portions will still remain in effect and enforceable to the fullest extent allowed by law.</p>
             </CardContent>
           </Card>
+          </AnimatedCard>
 
           {/* 8. Governing Law & Dispute Resolution */}
-          <Card>
+          <AnimatedCard index={8}>
+            <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>8</div>
@@ -160,9 +197,11 @@ export default function LegalPage() {
               <p style={{ color: 'var(--color-text-default)' }}>These Terms are governed by the laws of the United Kingdom. Any disputes arising under these Terms shall be resolved exclusively in courts located within the United Kingdom. You waive any right to a jury trial. The United Nations Convention on Contracts for the International Sale of Goods does not apply.</p>
             </CardContent>
           </Card>
+          </AnimatedCard>
 
           {/* 9. Changes to These Terms */}
-          <Card>
+          <AnimatedCard index={9}>
+            <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>9</div>
@@ -173,9 +212,11 @@ export default function LegalPage() {
               <p style={{ color: 'var(--color-text-default)' }}>We may update these Terms at any time. When changes are made, the updated date will reflect at the top of this page. Continued use of the Website after changes indicates your acceptance of the updated Terms.</p>
             </CardContent>
           </Card>
+          </AnimatedCard>
 
           {/* 10. Contact Us */}
-          <Card>
+          <AnimatedCard index={10}>
+            <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>10</div>
@@ -187,6 +228,7 @@ export default function LegalPage() {
               <p>contact@kai.com</p>
             </CardContent>
           </Card>
+          </AnimatedCard>
         </div>
       </div>
     </div>
