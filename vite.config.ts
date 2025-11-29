@@ -13,13 +13,7 @@ export default defineConfig(({ mode }) => ({
   ],
   server: {
     watch: { usePolling: true, interval: 800 /* 300~1500 */ },
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5178',
-        changeOrigin: true,
-        secure: false,
-      },
-    },
+    middlewareMode: true,
   },
   resolve: {
     alias: {
