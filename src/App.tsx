@@ -1,7 +1,7 @@
 import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import Layout from '@/components/Layout';
 import Index from './pages/Index';
@@ -9,7 +9,6 @@ import Events from './pages/Events';
 import Enroll from './pages/Enroll';
 import Contact from './pages/Contact';
 import Legal from './pages/Legal';
-import NotFound from './pages/NotFound';
 
 const queryClient = new QueryClient();
 
@@ -26,7 +25,7 @@ const App = () => (
               <Route path="/enroll" element={<Enroll />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/legal" element={<Legal />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </Layout>
         </BrowserRouter>
