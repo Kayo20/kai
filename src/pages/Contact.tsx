@@ -274,7 +274,7 @@ function MsBookingsIframe() {
                   className="inline-flex items-center gap-2 font-semibold text-lg transition-colors"
                   style={{ color: 'var(--color-brand-primary)' }}
                 >
-                  contact@kai.com
+                  moreaboutkai@kaisg.com
                   <Mail className="w-5 h-5" />
                 </a>
               </div>

@@ -12,8 +12,9 @@ export default defineConfig(({ mode }) => ({
     react(),
   ],
   server: {
+    port: 5173,
+    host: '127.0.0.1',
     watch: { usePolling: true, interval: 800 /* 300~1500 */ },
-    middlewareMode: true,
   },
   resolve: {
     alias: {

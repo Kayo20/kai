@@ -225,7 +225,7 @@ export default function LegalPage() {
             </CardHeader>
             <CardContent>
               <p style={{ color: 'var(--color-text-default)' }}>For questions or concerns about these Terms, please contact us at:</p>
-              <p>contact@kai.com</p>
+              <p>moreaboutkai@kaisg.com</p>
             </CardContent>
           </Card>
           </AnimatedCard>
