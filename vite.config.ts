@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => ({
     port: 5173,
     host: '127.0.0.1',
     watch: { usePolling: true, interval: 800 /* 300~1500 */ },
+    historyApiFallback: true,
   },
   resolve: {
     alias: {
