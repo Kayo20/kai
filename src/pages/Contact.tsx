@@ -272,7 +272,7 @@ function MsBookingsIframe() {
                 {/* Use a public or VITE-prefixed env var for the public contact email (do not embed secrets in source) */}
                 {
                   (() => {
-                    const publicEmail = (import.meta as any).env?.VITE_CONTACT_EMAIL;
+                    const publicEmail = "moreaboutkai@kaisg.com";
                     return publicEmail ? (
                       <a
                         href={`mailto:${publicEmail}`}

@@ -227,7 +227,7 @@ export default function LegalPage() {
               <p style={{ color: 'var(--color-text-default)' }}>For questions or concerns about these Terms, please contact us at:</p>
               {
                 (() => {
-                  const publicEmail = (import.meta as any).env?.VITE_CONTACT_EMAIL;
+                  const publicEmail = "moreaboutkai@kaisg.com";
                   return publicEmail ? <p>{publicEmail}</p> : null;
                 })()
               }
