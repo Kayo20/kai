@@ -23,8 +23,8 @@ export default function EnrollPage() {
         'Basic Data Centre access',
         'Community support',
       ],
-      buttonText: 'Subscribe with Wise',
-      paymentLink: 'https://wise.com/pay/basic',
+      buttonText: 'PAY NOW',
+      paymentLink: 'https://wise.com/pay/business/kaisustainabilitygrouplimited',
       highlighted: false,
     },
     {
@@ -38,8 +38,8 @@ export default function EnrollPage() {
         'Trusted Alliance resources',
         'Priority support',
       ],
-      buttonText: 'Subscribe with Wise',
-      paymentLink: 'https://wise.com/pay/standard',
+      buttonText: 'PAY NOW',
+      paymentLink: 'https://wise.com/pay/business/kaisustainabilitygrouplimited',
       highlighted: true,
     },
     {
@@ -68,30 +68,16 @@ export default function EnrollPage() {
     try {
       // Extract price as number (e.g., "$29" -> 29)
       const priceNumber = parseFloat(plan.price.replace('$', ''));
-
-      const response = await fetch('/.netlify/functions/wise-checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          planName: plan.name,
-          amount: priceNumber,
-          currency: 'USD',
-        }),
-      });
-
-      const data = await response.json();
-      if (!response.ok) {
-        toast.error(data.error || 'Failed to initialize payment');
-        setLoading(false);
-        return;
-      }
-
-      // Redirect to Wise payment with the calculated amount
-      window.open(data.url, '_blank');
-      toast.success(`Opening Wise payment for $${priceNumber}...`);
+      
+      // Add amount and currency query parameters to Wise payment link
+      const paymentUrl = `${plan.paymentLink}?amount=${priceNumber}&currency=USD`;
+      
+      // Open direct Wise payment link with amount and currency
+      window.open(paymentUrl, '_blank');
+      toast.success(`Opening Wise payment for $${priceNumber} USD...`);
     } catch (err) {
-      console.error('Checkout error:', err);
-      toast.error('Failed to initialize payment');
+      console.error('Payment error:', err);
+      toast.error('Failed to open payment');
     } finally {
       setLoading(false);
     }
