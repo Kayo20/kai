@@ -269,22 +269,11 @@ function MsBookingsIframe() {
                 <p style={{ color: 'var(--color-text-default)' }}>
                   You can also reach us directly at
                 </p>
-                {/* Use a public or VITE-prefixed env var for the public contact email (do not embed secrets in source) */}
-                {
-                  (() => {
-                    const publicEmail = "moreaboutkai@kaisg.com";
-                    return publicEmail ? (
-                      <a
-                        href={`mailto:${publicEmail}`}
-                        className="inline-flex items-center gap-2 font-semibold text-lg transition-colors"
-                        style={{ color: 'var(--color-brand-primary)' }}
-                      >
-                        {publicEmail}
-                        <Mail className="w-5 h-5" />
-                      </a>
-                    ) : null;
-                  })()
-                }
+                <a href="mailto:moreaboutkai@kaisg.com"
+                className='inline-flex items-center gap-2 font-semibold text-lg transition-colors'
+                style={{ color: 'var(--color-brand-primarry)'}}>
+                  mailto:moreaboutkai@kaisg.com
+                </a>
               </div>
             </CardContent>
           </Card>
