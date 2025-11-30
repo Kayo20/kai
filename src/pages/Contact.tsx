@@ -272,7 +272,7 @@ function MsBookingsIframe() {
                 <a href="mailto:moreaboutkai@kaisg.com"
                 className='inline-flex items-center gap-2 font-semibold text-lg transition-colors'
                 style={{ color: 'var(--color-brand-primarry)'}}>
-                  mailto:moreaboutkai@kaisg.com
+                 moreaboutkai@kaisg.com
                 </a>
               </div>
             </CardContent>
