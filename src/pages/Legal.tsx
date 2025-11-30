@@ -225,7 +225,12 @@ export default function LegalPage() {
             </CardHeader>
             <CardContent>
               <p style={{ color: 'var(--color-text-default)' }}>For questions or concerns about these Terms, please contact us at:</p>
-              <p>moreaboutkai@kaisg.com</p>
+              {
+                (() => {
+                  const publicEmail = (import.meta as any).env?.VITE_CONTACT_EMAIL || 'contact@kai.com';
+                  return <p>{publicEmail}</p>;
+                })()
+              }
             </CardContent>
           </Card>
           </AnimatedCard>
