@@ -272,8 +272,8 @@ function MsBookingsIframe() {
                 {/* Use a public or VITE-prefixed env var for the public contact email (do not embed secrets in source) */}
                 {
                   (() => {
-                    const publicEmail = (import.meta as any).env?.VITE_CONTACT_EMAIL || 'contact@kai.com';
-                    return (
+                    const publicEmail = (import.meta as any).env?.VITE_CONTACT_EMAIL;
+                    return publicEmail ? (
                       <a
                         href={`mailto:${publicEmail}`}
                         className="inline-flex items-center gap-2 font-semibold text-lg transition-colors"
@@ -282,7 +282,7 @@ function MsBookingsIframe() {
                         {publicEmail}
                         <Mail className="w-5 h-5" />
                       </a>
-                    );
+                    ) : null;
                   })()
                 }
               </div>
