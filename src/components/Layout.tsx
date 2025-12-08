@@ -316,7 +316,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Connect
               </h3>
               <a
-                href="https://www.linkedin.com/company/kai"
+                href="https://linkedin.com/company/kai-sustainability-group-ltd"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-white hover:underline transition-colors text-sm"
