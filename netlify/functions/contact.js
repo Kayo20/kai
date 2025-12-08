@@ -12,8 +12,8 @@ exports.handler = async function (event, context) {
     return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON' }) };
   }
 
-  const { name, email, message } = body;
-  if (!name || !email || !message) {
+  const { name, email, companyName, message } = body;
+  if (!name || !email || !companyName || !message) {
     return { statusCode: 400, body: JSON.stringify({ error: 'Missing fields' }) };
   }
 
@@ -38,8 +38,8 @@ exports.handler = async function (event, context) {
     const from = process.env.MAIL_FROM || mailUser;
     const to = process.env.CONTACT_RECEIVER || mailUser;
     const subject = `New contact message from ${name}`;
-    const text = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    const html = `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><hr/><p>${message}</p>`;
+    const text = `Name: ${name}\nCompany: ${companyName}\nEmail: ${email}\n\n${message}`;
+    const html = `<p><strong>Name:</strong> ${name}</p><p><strong>Company:</strong> ${companyName}</p><p><strong>Email:</strong> ${email}</p><hr/><p>${message}</p>`;
 
     await transporter.sendMail({ from, to, subject, text, html });
     return { statusCode: 200, body: JSON.stringify({ message: 'Message sent' }) };
