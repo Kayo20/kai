@@ -200,12 +200,12 @@ export default function LegalPage() {
               </div>
             </CardHeader>
             <CardContent>
-              <p style={{ color: 'var(--color-text-default)' }}>For questions or concerns about these Terms, please contact us at:</p>
+              <p style={{ color: 'var(--color-text-default)' }}>For questions or concerns about these Terms, please contact us:</p>
               {import.meta.env.VITE_CONTACT_EMAIL && (
                 <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`}
-                  className='inline-flex items-center gap-2 font-semibold text-lg transition-colors'
-                  style={{ color: 'var(--color-brand-primarry)'}}>
-                   {import.meta.env.VITE_CONTACT_EMAIL}
+                  className='inline-block px-6 py-3 font-semibold text-lg rounded-lg transition-all hover:shadow-lg'
+                  style={{ background: 'linear-gradient(90deg, var(--color-brand-primary), var(--color-accent))', color: 'var(--accent-foreground)', marginTop: '1rem' }}>
+                   Send Email
                 </a>
               )}
             </CardContent>
