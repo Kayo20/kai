@@ -9,6 +9,7 @@ import Events from './pages/Events';
 import Enroll from './pages/Enroll';
 import Contact from './pages/Contact';
 import Legal from './pages/Legal';
+import Credits from './pages/Credits';
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
               <Route path="/enroll" element={<Enroll />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/legal" element={<Legal />} />
+              <Route path="/credits" element={<Credits />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </Layout>

@@ -33,6 +33,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { path: '/events', label: t('nav.events') },
     { path: '/enroll', label: t('nav.enroll') },
     { path: '/contact', label: t('nav.contact') },
+    { path: '/credits', label: 'Credits' },
   ];
 
   // Status banner component: shows whether required env vars are present on deployed site
