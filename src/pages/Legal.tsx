@@ -212,5 +212,7 @@ export default function LegalPage() {
             </Card>
             </AnimatedCard>
         </div>
+      </div>
+    </div>
   );
 }
