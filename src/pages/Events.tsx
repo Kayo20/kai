@@ -166,7 +166,7 @@ export default function EventsPage() {
         {/* View All Events CTA */}
         <div className="flex justify-center mt-8">
           <a
-            href="https://www.eventbrite.com/d/online/kai--events/"
+            href="https://kaisg.eventbrite.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-semibold text-white transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-lg"

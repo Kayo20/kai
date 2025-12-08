@@ -64,13 +64,14 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    companyName: '',
     message: '',
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Validate
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name || !formData.email || !formData.companyName || !formData.message) {
       toast.error('Please fill all fields');
       return;
     }
@@ -89,7 +90,7 @@ export default function ContactPage() {
       if (!resp.ok) throw new Error(json?.error || 'Failed to send message');
 
       toast.success('Message sent successfully! We\'ll get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', companyName: '', message: '' });
     } catch (err: any) {
       console.error('Contact submit error', err);
       toast.error(err?.message || 'Failed to send message');
@@ -220,6 +221,20 @@ function MsBookingsIframe() {
                 </div>
 
                 <div className="space-y-2">
+                  <Label htmlFor="companyName">Company Name</Label>
+                    <Input
+                    id="companyName"
+                    name="companyName"
+                    type="text"
+                    value={formData.companyName}
+                    onChange={handleChange}
+                    placeholder="Your Company Name"
+                    required
+                      className="transition-smooth focus:ring-2"
+                  />
+                </div>
+
+                <div className="space-y-2">
                   <Label htmlFor="message">{t('message')}</Label>
                     <Textarea
                     id="message"
@@ -267,13 +282,13 @@ function MsBookingsIframe() {
                   Prefer Email?
                 </h3>
                 <p style={{ color: 'var(--color-text-default)' }}>
-                  You can also reach us directly at
+                  Click below to send us an email
                 </p>
                 {import.meta.env.VITE_CONTACT_EMAIL && (
                   <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`}
-                  className='inline-flex items-center gap-2 font-semibold text-lg transition-colors'
-                  style={{ color: 'var(--color-brand-primarry)'}}>
-                   {import.meta.env.VITE_CONTACT_EMAIL}
+                  className='inline-block px-6 py-3 font-semibold text-lg rounded-lg transition'
+                  style={{ background: 'linear-gradient(90deg, var(--color-brand-primary), var(--color-accent))', color: 'var(--accent-foreground)' }}>
+                   Send Email
                   </a>
                 )}
               </div>

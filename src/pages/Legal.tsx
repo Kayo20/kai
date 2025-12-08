@@ -35,184 +35,160 @@ export default function LegalPage() {
           >
             Terms & Conditions
           </h1>
-          <p style={{ color: 'var(--color-text-default)' }}>Last updated: July 25, 2025</p>
+          <p style={{ color: 'var(--color-text-default)' }}>Last updated: December 8, 2025</p>
         </div>
 
         {/* Terms Content */}
         <div className="space-y-6">
-          {/* Intro card */}
+          {/* 0. Introduction */}
           <AnimatedCard index={0}>
             <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <div style={{ width: 56, height: 56, borderRadius: 28, background: 'linear-gradient(90deg,var(--color-brand-primary),var(--color-accent))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 700 }}>T</div>
-                <div>
-                  <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Terms & Conditions</CardTitle>
-                  <div style={{ color: 'var(--color-text-default)' }}>Last updated: July 25, 2025</div>
-                </div>
+                <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>0</div>
+                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Introduction</CardTitle>
               </div>
             </CardHeader>
-            <CardContent className="prose prose-gray max-w-none">
-              <p style={{ color: 'var(--color-text-default)', lineHeight: 1.75 }}>
-                Welcome to Kai Sustainability Group Ltd (“Kai”). These Terms and Conditions (“Terms") govern your access and use of kaisg.com and all related products and services (“Services"). By using our Website, you agree to these Terms. If you do not agree, please discontinue use immediately.
-              </p>
+            <CardContent>
+              <p style={{ color: 'var(--color-text-default)' }}>These terms and conditions ("Agreement") set forth the general terms and conditions of your use of the kaisg.com website ("Website" or "Service") and any of its related products and services (collectively, "Services"). This Agreement is legally binding between you ("User", "you" or "your") and Kai Sustainability Group Ltd (doing business as "Kai", "we", "us" or "our"). If you are entering into this Agreement on behalf of a business or other legal entity, you represent that you have the authority to bind such entity to this Agreement, in which case the terms "User", "you" or "your" shall refer to such entity. If you do not have such authority, or if you do not agree with the terms of this Agreement, you must not accept this Agreement and may not access and use the Website and Services. By accessing and using the Website and Services, you acknowledge that you have read, understood, and agree to be bound by the terms of this Agreement. You acknowledge that this Agreement is a contract between you and Kai, even though it is electronic and is not physically signed by you, and it governs your use of the Website and Services.</p>
             </CardContent>
-          </Card>
-          </AnimatedCard>
+            </Card>
+            </AnimatedCard>
 
-          {/* 1. Acceptance of Terms */}
+          {/* 1. Accounts and Membership */}
           <AnimatedCard index={1}>
             <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>1</div>
-                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Acceptance of Terms</CardTitle>
+                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Accounts and Membership</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p style={{ color: 'var(--color-text-default)', lineHeight: 1.75 }}>
-                By accessing or using this Website, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you are using the Website on behalf of an organization, you represent that you have the authority to bind that organization.
-              </p>
+              <p style={{ color: 'var(--color-text-default)' }}>If you create an account on the Website, you are responsible for maintaining the security of your account and you are fully responsible for all activities that occur under the account and any other actions taken in connection with it. We may monitor and review new accounts before you may sign in and start using the Services. Providing false contact information of any kind may result in the termination of your account. You must immediately notify us of any unauthorized uses of your account or any other breaches of security. We will not be liable for any acts or omissions by you, including any damages of any kind incurred as a result of such acts or omissions. We may suspend, disable, or delete your account (or any part thereof) if we determine that you have violated any provision of this Agreement or that your conduct or content would tend to damage our reputation and goodwill. If we delete your account for the foregoing reasons, you may not re-register for our Services. We may block your email address and Internet protocol address to prevent further registration.</p>
             </CardContent>
-          </Card>
-          </AnimatedCard>
+            </Card>
+            </AnimatedCard>
 
-          {/* 2. Accounts & Membership */}
+          {/* 2. Links to Other Resources */}
           <AnimatedCard index={2}>
             <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>2</div>
-                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Accounts & Membership</CardTitle>
+                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Links to Other Resources</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc list-inside">
-                <li>You are responsible for maintaining the security of your account.</li>
-                <li>You must provide accurate and complete information.</li>
-                <li>Any actions taken under your account are your responsibility.</li>
-                <li>You must notify us immediately of any unauthorized access or security breach.</li>
-              </ul>
-              <p style={{ color: 'var(--color-text-default)' }}>We reserve the right to monitor, suspend, or delete accounts that violate these Terms or harm our reputation. Deleted accounts may not be re-registered.</p>
+              <p style={{ color: 'var(--color-text-default)' }}>Although the Website and Services may link to other resources (such as websites, mobile applications, etc.), we are not, directly or indirectly, implying any approval, association, sponsorship, endorsement, or affiliation with any linked resource, unless specifically stated herein. We are not responsible for examining or evaluating, and we do not warrant the offerings of, any businesses or individuals or the content of their resources. We do not assume any responsibility or liability for the actions, products, services, and content of any other third parties. You should carefully review the legal statements and other conditions of use of any resource which you access through a link on the Website. Your linking to any other off-site resources is at your own risk.</p>
             </CardContent>
-          </Card>
-          </AnimatedCard>
+            </Card>
+            </AnimatedCard>
 
-          {/* 3. Links to External Resources */}
+          {/* 3. Prohibited Uses */}
           <AnimatedCard index={3}>
             <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>3</div>
-                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Links to External Resources</CardTitle>
+                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Prohibited Uses</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p style={{ color: 'var(--color-text-default)' }}>Our Website may contain links to third-party websites or applications. Kai does not endorse, control, or assume responsibility for any third-party content, products, or services. You access external links at your own risk and are responsible for reviewing their policies and terms.</p>
+              <p style={{ color: 'var(--color-text-default)' }}>In addition to other terms as set forth in the Agreement, you are prohibited from using the Website and Services or Content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Website and Services, third party products and services, or the Internet; (h) to spam, phish, pharm, pretext, spider, crawl, or scrape; (i) for any obscene or immoral purpose; or (j) to interfere with or circumvent the security features of the Website and Services, third party products and services, or the Internet. We reserve the right to terminate your use of the Website and Services for violating any of the prohibited uses.</p>
             </CardContent>
-          </Card>
-          </AnimatedCard>
+            </Card>
+            </AnimatedCard>
 
-          {/* 4. Prohibited Uses */}
+          {/* 4. Intellectual Property Rights */}
           <AnimatedCard index={4}>
             <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>4</div>
-                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Prohibited Uses</CardTitle>
+                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Intellectual Property Rights</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc list-inside">
-                <li>For unlawful activities</li>
-                <li>To violate any regulations or laws</li>
-                <li>To infringe intellectual property rights</li>
-                <li>To harass, abuse, discriminate, or harm others</li>
-                <li>To submit misleading information</li>
-                <li>To upload harmful code, viruses, or malicious software</li>
-                <li>To spam, scrape, crawl, or phish</li>
-                <li>For any immoral or obscene purpose</li>
-                <li>To attempt to bypass or interfere with security features</li>
-              </ul>
-              <p style={{ color: 'var(--color-text-default)' }}>We may restrict or terminate access for violating any of the above.</p>
+              <p style={{ color: 'var(--color-text-default)' }}>"Intellectual Property Rights" means all present and future rights conferred by statute, common law or equity in or in relation to any copyright and related rights, trademarks, designs, patents, inventions, goodwill and the right to sue for passing off, rights to inventions, rights to use, and all other intellectual property rights, in each case whether registered or unregistered and including all applications and rights to apply for and be granted, rights to claim priority from, such rights and all similar or equivalent rights or forms of protection and any other results of intellectual activity which subsist or will subsist now or in the future in any part of the world. This Agreement does not transfer to you any intellectual property owned by Kai or third parties, and all rights, titles, and interests in and to such property will remain (as between the parties) solely with Kai. All trademarks, service marks, graphics and logos used in connection with the Website and Services, are trademarks or registered trademarks of Kai or its licensors. Other trademarks, service marks, graphics and logos used in connection with the Website and Services may be the trademarks of other third parties. Your use of the Website and Services grants you no right or license to reproduce or otherwise use any of Kai or third party trademarks.</p>
             </CardContent>
-          </Card>
-          </AnimatedCard>
+            </Card>
+            </AnimatedCard>
 
-          {/* 5. Intellectual Property Rights */}
+          {/* 5. Indemnification */}
           <AnimatedCard index={5}>
             <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>5</div>
-                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Intellectual Property Rights</CardTitle>
+                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Indemnification</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p style={{ color: 'var(--color-text-default)' }}>All content, trademarks, logos, graphics, and materials displayed on the Website are owned by Kai or our licensors. Nothing in these Terms grants you the right to copy, reproduce, distribute, or use these materials without our written permission.</p>
+              <p style={{ color: 'var(--color-text-default)' }}>You agree to indemnify and hold Kai and its affiliates, directors, officers, employees, agents, suppliers and licensors harmless from and against any liabilities, losses, damages or costs, including reasonable attorneys' fees, incurred in connection with or arising from any third party allegations, claims, actions, disputes, or demands asserted against any of them as a result of or relating to your Content, your use of the Website and Services or any willful misconduct on your part.</p>
             </CardContent>
-          </Card>
-          </AnimatedCard>
+            </Card>
+            </AnimatedCard>
 
-          {/* 6. Indemnification */}
+          {/* 6. Severability */}
           <AnimatedCard index={6}>
             <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>6</div>
-                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Indemnification</CardTitle>
+                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Severability</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p style={{ color: 'var(--color-text-default)' }}>You agree to indemnify and hold harmless Kai, its employees, directors, partners, and affiliates from any claims, losses, damages, or expenses (including legal fees) arising from your use of the Website, your content, or your violation of these Terms.</p>
+              <p style={{ color: 'var(--color-text-default)' }}>All rights and restrictions contained in this Agreement may be exercised and shall be applicable and binding only to the extent that they do not violate any applicable laws and are intended to be limited to the extent necessary so that they will not render this Agreement illegal, invalid or unenforceable. If any provision or portion of any provision of this Agreement shall be held to be illegal, invalid or unenforceable by a court of competent jurisdiction, it is the intention of the parties that the remaining provisions or portions thereof shall constitute their agreement with respect to the subject matter hereof, and all such remaining provisions or portions thereof shall remain in full force and effect.</p>
             </CardContent>
-          </Card>
-          </AnimatedCard>
+            </Card>
+            </AnimatedCard>
 
-          {/* 7. Severability */}
+          {/* 7. Dispute Resolution */}
           <AnimatedCard index={7}>
             <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>7</div>
-                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Severability</CardTitle>
+                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Dispute Resolution</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p style={{ color: 'var(--color-text-default)' }}>If any part of these Terms is found to be unenforceable or invalid, the remaining portions will still remain in effect and enforceable to the fullest extent allowed by law.</p>
+              <p style={{ color: 'var(--color-text-default)' }}>The formation, interpretation, and performance of this Agreement and any disputes arising out of it shall be governed by the substantive and procedural laws of United Kingdom without regard to its rules on conflicts or choice of law and, to the extent applicable, the laws of United Kingdom. The exclusive jurisdiction and venue for actions related to the subject matter hereof shall be the courts located in United Kingdom, and you hereby submit to the personal jurisdiction of such courts. You hereby waive any right to a jury trial in any proceeding arising out of or related to this Agreement. The United Nations Convention on Contracts for the International Sale of Goods does not apply to this Agreement.</p>
             </CardContent>
-          </Card>
-          </AnimatedCard>
+            </Card>
+            </AnimatedCard>
 
-          {/* 8. Governing Law & Dispute Resolution */}
+          {/* 8. Changes and Amendments */}
           <AnimatedCard index={8}>
             <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>8</div>
-                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Governing Law & Dispute Resolution</CardTitle>
+                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Changes and Amendments</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p style={{ color: 'var(--color-text-default)' }}>These Terms are governed by the laws of the United Kingdom. Any disputes arising under these Terms shall be resolved exclusively in courts located within the United Kingdom. You waive any right to a jury trial. The United Nations Convention on Contracts for the International Sale of Goods does not apply.</p>
+              <p style={{ color: 'var(--color-text-default)' }}>We reserve the right to modify this Agreement or its terms related to the Website and Services at any time at our discretion. When we do, we will revise the updated date at the bottom of this page. We may also provide notice to you in other ways at our discretion, such as through the contact information you have provided. An updated version of this Agreement will be effective immediately upon the posting of the revised Agreement unless otherwise specified. Your continued use of the Website and Services after the effective date of the revised Agreement (or such other act specified at that time) will constitute your consent to those changes.</p>
             </CardContent>
-          </Card>
-          </AnimatedCard>
+            </Card>
+            </AnimatedCard>
 
-          {/* 9. Changes to These Terms */}
+          {/* 9. Acceptance of These Terms */}
           <AnimatedCard index={9}>
             <Card>
             <CardHeader>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 22, background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-foreground)', fontWeight: 700 }}>9</div>
-                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Changes to These Terms</CardTitle>
+                <CardTitle style={{ fontFamily: 'M PLUS Rounded 1c' }}>Acceptance of These Terms</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p style={{ color: 'var(--color-text-default)' }}>We may update these Terms at any time. When changes are made, the updated date will reflect at the top of this page. Continued use of the Website after changes indicates your acceptance of the updated Terms.</p>
+              <p style={{ color: 'var(--color-text-default)' }}>You acknowledge that you have read this Agreement and agree to all its terms and conditions. By accessing and using the Website and Services you agree to be bound by this Agreement. If you do not agree to abide by the terms of this Agreement, you are not authorized to access or use the Website and Services.</p>
             </CardContent>
-          </Card>
-          </AnimatedCard>
+            </Card>
+            </AnimatedCard>
 
           {/* 10. Contact Us */}
           <AnimatedCard index={10}>
@@ -233,10 +209,8 @@ export default function LegalPage() {
                 </a>
               )}
             </CardContent>
-          </Card>
-          </AnimatedCard>
+            </Card>
+            </AnimatedCard>
         </div>
-      </div>
-    </div>
   );
 }
