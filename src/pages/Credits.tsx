@@ -8,14 +8,7 @@ import { Sparkles } from 'lucide-react';
 const CreditsPage: React.FC = () => {
   const { t } = useLanguage();
   
-  // Array of portfolio/credit images from the credit folder
-  const portfolioImages = [
-    '/credit/img.png',
-    '/credit/img (2).png',
-    '/credit/img (3).png',
-    '/credit/img (4).png',
-    '/credit/img (5).png',
-  ];
+  // Portfolio images moved to Home page; Credits page focuses on profile and bio
 
   return (
     <div className="min-h-screen" style={{ background: 'var(--color-bg-light)' }}>
@@ -133,36 +126,11 @@ const CreditsPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Portfolio Section */}
-          <div className="max-w-6xl mx-auto">
-            {/* <div className="text-center mb-12">
-              <h2 
-                className="text-3xl md:text-4xl font-bold mb-4" 
-                style={{ fontFamily: 'M PLUS Rounded 1c', color: 'var(--color-brand-primary)' }}
-              >
-                Yumi's Logo Portfolio
-              </h2>
-              <p className="text-base md:text-lg max-w-2xl mx-auto" style={{ color: 'var(--color-text-default)' }}>
-                A showcase of beautiful, minimalist logo designs that demonstrate her expertise in brand identity creation
-              </p>
-            </div> */}
-
-            {/* Portfolio Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-              {portfolioImages.map((imgPath, index) => (
-                <div 
-                  key={index} 
-                  className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-white p-4 md:p-6 flex items-center justify-center"
-                  style={{ minHeight: '200px' }}
-                >
-                  <img 
-                    src={imgPath}
-                    alt={`Logo Design ${index + 1}`}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-              ))}
-            </div>
+          {/* Logo portfolio moved to home page. Visit the home page to view the full portfolio grid. */}
+          <div className="max-w-6xl mx-auto text-center py-8">
+            <p className="text-sm text-gray-600">
+              The logo portfolio has been moved to the home page. Visit the home page to view the full portfolio of designs.
+            </p>
           </div>
         </div>
       </div>

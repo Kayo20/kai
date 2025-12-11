@@ -102,6 +102,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Logos / Credits Preview (moved from Credits page) */}
+      {/* <section className="py-12 lg:py-20" style={{ background: 'var(--color-bg-light)' }}>
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto text-center mb-8">
+            <h3 className="text-xl md:text-2xl font-semibold" style={{ color: 'var(--color-brand-primary)', fontFamily: 'M PLUS Rounded 1c' }}>
+              Featured Logos
+            </h3>
+            <p className="text-sm text-gray-600">A selection of logo designs by our brand designer.</p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto">
+            {['/credit/img.png','/credit/img (2).png','/credit/img (3).png','/credit/img (4).png','/credit/img (5).png'].map((src, i) => (
+              <div key={i} className="overflow-hidden rounded-xl bg-white p-4 md:p-6 flex items-center justify-center shadow-sm hover:shadow-lg transition-shadow duration-300" style={{ minHeight: 140 }}>
+                <img src={src} alt={`Logo ${i+1}`} className="w-full h-full object-contain" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
       {/* Content Blocks */}
       <section className="py-20" style={{ background: 'var(--color-bg-light)' }}>
         <div className="container mx-auto px-4">
@@ -192,6 +212,34 @@ export default function HomePage() {
               </Card>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Logos / Credits Preview Section */}
+      <section className="py-12" style={{ background: 'var(--color-bg-light)' }}>
+        <div className="container mx-auto px-4">
+          {/* <div className="max-w-6xl mx-auto text-center mb-8">
+            <h3 className="text-2xl font-bold" style={{ fontFamily: 'M PLUS Rounded 1c', color: 'var(--color-brand-primary)' }}>
+              Featured Logos
+            </h3>
+            <p className="text-sm text-gray-600">A selection of logo designs that helped shape Kai's visual identity.</p>
+          </div> */}
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            <img src="/credit/img.png" className="w-full h-32 object-contain p-3 bg-white rounded-md shadow-sm" alt="logo 1" />
+            <img src="/credit/img (2).png" className="w-full h-32 object-contain p-3 bg-white rounded-md shadow-sm" alt="logo 2" />
+            <img src="/credit/img (3).png" className="w-full h-32 object-contain p-3 bg-white rounded-md shadow-sm" alt="logo 3" />
+            <img src="/credit/img (4).png" className="w-full h-32 object-contain p-3 bg-white rounded-md shadow-sm" alt="logo 4" />
+            <img src="/credit/img (5).png" className="w-full h-32 object-contain p-3 bg-white rounded-md shadow-sm" alt="logo 5" />
+          </div>
+
+          {/* <div className="text-center mt-6">
+            <Link to="/credits">
+              <Button className="gap-2" style={{ background: 'linear-gradient(90deg, var(--color-brand-primary), var(--color-accent))', color: 'var(--accent-foreground)' }}>
+                View Full Credits
+              </Button>
+            </Link>
+          </div> */}
         </div>
       </section>
     </div>
