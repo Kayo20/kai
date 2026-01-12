@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "events": "Événements",
+    "enroll": "S'inscrire",
+    "contact": "Contact",
+    "terms": "Conditions Générales"
+  },
+  "header": {
+    "manageAccount": "Gérer le Compte"
+  },
+  "footer": {
+    "linkedin": "LinkedIn"
+  },
+  "homepage": {
+    "block1_title": "Aidez vos clients à protéger leur entreprise",
+    "block1_text": "Identification approfondie des risques combinée à une gestion proactive stratégique pour renforcer la résilience de l'entreprise et créer une valeur durable à long terme.",
+    "block2_title": "Qu'est-ce que Kai ?",
+    "block2_text": "Destiné aux petites et moyennes entreprises. Kai fournit à ses clients 3 piliers fondamentaux pour une pratique réussie.",
+    "block3_1_title": "Kit prêt à l'emploi",
+    "block3_1_text": "Pour construire un cabinet de conseil en durabilité et conformité.",
+    "block3_2_title": "Centre de Données",
+    "block3_2_text": "Un Centre mutualisé de Compétences et de Calcul de Données, pour garantir qualité et faible coût.",
+    "block3_3_title": "Alliance de Confiance",
+    "block3_3_text": "Des experts fiables et professionnels pour partager des connaissances de pointe et fournir une formation.",
+    "our_story_title": "NOTRE HISTOIRE",
+    "our_story_text": "Kai est une alliance de professionnels hautement expérimentés avec plus de 80 ans d'expertise combinée en conseil en conformité, comptabilité, audit et durabilité. Notre équipe multilingue et internationale s'engage à renforcer votre pratique en fournissant de nouvelles compétences alignées sur les meilleures pratiques de l'industrie et les normes internationales les plus récentes.",
+    "philosophy_title": "Notre Philosophie",
+    "philosophy_text": "Kai est nommé avec intention, tiré du terme japonais 改, qui signifie 'Renouveler' ou 'Changer'. Il incarne le progrès et l'élan en avant. Le nom Kai apparaît dans plusieurs mots japonais comme Sekai (monde), Kaigai (étranger) et surtout Kaizen : la philosophie des améliorations continues et incrémentales qui génèrent des résultats positifs significatifs dans les opérations commerciales. Au cœur, Kai vous permet d'aider vos clients à gérer efficacement les risques grâce à des changements subtils et majeurs, en tirant parti des normes de conformité reconnues mondialement."
+  }
+}

@@ -1,0 +1,276 @@
+import { useEffect, useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { ArrowRight, Sparkles, Users, Zap } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+
+
+
+export default function HomePage() {
+  const { t } = useLanguage();
+  const navigate = useNavigate();
+  const [visibleBlocks, setVisibleBlocks] = useState<number[]>([]);
+  const blockRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = blockRefs.current.indexOf(entry.target as HTMLDivElement);
+            if (index !== -1 && !visibleBlocks.includes(index)) {
+              setVisibleBlocks((prev) => [...prev, index]);
+            }
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    blockRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, [visibleBlocks]);
+
+  const contentBlocks = [
+    {
+      icon: Sparkles,
+      title: t('homepage.hero_subtitle'),
+      description: t('homepage.hero_text'),
+      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop',
+    },
+    {
+      icon: Users,
+      title: t('homepage.block2_title'),
+      description: t('homepage.block2_text'),
+      image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&h=600&fit=crop',
+    },
+    {
+      icon: Zap,
+      title: t('homepage.feature1_title'),
+      description: t('homepage.feature1_text'),
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
+    },
+    {
+      icon: Zap,
+      title: t('homepage.feature2_title'),
+      description: t('homepage.feature2_text'),
+      image: 'https://images.unsplash.com/photo-1454165833767-0275080187a1?w=800&h=600&fit=crop',
+    },
+    {
+      icon: Zap,
+      title: t('homepage.feature3_title'),
+      description: t('homepage.feature3_text'),
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop',
+    },
+    {
+      icon: Zap,
+      title: t('homepage.feature4_title'),
+      description: t('homepage.feature4_text'),
+      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen pt-20">
+
+      {/* Logos / Credits Preview (moved from Credits page) */}
+      {/* <section className="py-12 lg:py-20" style={{ background: 'var(--color-bg-light)' }}>
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto text-center mb-8">
+            <h3 className="text-xl md:text-2xl font-semibold" style={{ color: 'var(--color-brand-primary)', fontFamily: 'M PLUS Rounded 1c' }}>
+              Featured Logos
+            </h3>
+            <p className="text-sm text-gray-600">A selection of logo designs by our brand designer.</p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto">
+            {['/credit/img.png','/credit/img (2).png','/credit/img (3).png','/credit/img (4).png','/credit/img (5).png'].map((src, i) => (
+              <div key={i} className="overflow-hidden rounded-xl bg-white p-4 md:p-6 flex items-center justify-center shadow-sm hover:shadow-lg transition-shadow duration-300" style={{ minHeight: 140 }}>
+                <img src={src} alt={`Logo ${i+1}`} className="w-full h-full object-contain" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+      {/* Hero Section */}
+      <section className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'var(--color-bg-light)' }}>
+        <div className="absolute inset-0 opacity-10" style={{ background: 'radial-gradient(circle at center, var(--color-brand-primary), transparent 70%)' }}></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+            <h1
+              className="text-6xl md:text-8xl font-black tracking-tight"
+              style={{
+                fontFamily: 'M PLUS Rounded 1c',
+                color: 'var(--color-brand-primary)',
+                letterSpacing: '-0.02em'
+              }}
+            >
+              {t('homepage.hero_title', { defaultValue: 'Kai' })}
+            </h1>
+            <p
+              className="text-xl md:text-2xl font-medium"
+              style={{ color: 'var(--color-text-default)', opacity: 0.8 }}
+            >
+              {t('homepage.hero_welcome', { defaultValue: 'Welcome to Kai' })}
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+              <Link to="/enroll">
+                <Button
+                  size="lg"
+                  className="px-8 py-6 text-lg rounded-full gap-2 transition-all hover:scale-105 active:scale-95 shadow-lg"
+                  style={{
+                    background: 'var(--color-brand-primary)',
+                    color: 'white'
+                  }}
+                >
+                  {t('homepage.hero_get_started', { defaultValue: 'Get Started' })}
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </Link>
+              <Link to="/events">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-6 text-lg rounded-full border-2 transition-all hover:scale-105 active:scale-95 shadow-sm"
+                  style={{
+                    borderColor: 'var(--color-brand-primary)',
+                    color: 'var(--color-brand-primary)',
+                    background: 'transparent'
+                  }}
+                >
+                  {t('homepage.hero_view_events', { defaultValue: 'View Events' })}
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Blocks */}
+      <section className="py-20" style={{ background: 'var(--color-bg-light)' }}>
+        <div className="container mx-auto px-4">
+          <div className="space-y-20">
+            {contentBlocks.map((block, index) => {
+              const Icon = block.icon;
+              const isEven = index % 2 === 0;
+              const isVisible = visibleBlocks.includes(index);
+
+              return (
+                <div
+                  key={index}
+                  ref={(el: HTMLDivElement | null) => {
+                    blockRefs.current[index] = el;
+                  }}
+                  className={`scroll-reveal ${isVisible ? 'revealed' : ''}`}
+                >
+                  <Card className="overflow-hidden border-0 shadow-xl hover-lift">
+                    <CardContent className="p-0">
+                      <div className={`grid md:grid-cols-2 gap-0 ${isEven ? '' : 'md:grid-flow-dense'}`}>
+                        <div className={`relative h-64 md:h-auto ${isEven ? '' : 'md:col-start-2'}`}>
+                          <img
+                            src={block.image}
+                            alt={block.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(11,76,106,0.12), rgba(255,138,0,0.12))' }}></div>
+                        </div>
+                        <div className="p-8 md:p-12 flex flex-col justify-center space-y-6">
+                          <div className="w-16 h-16 rounded-2xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, var(--color-brand-primary), var(--color-accent))' }}>
+                            <Icon className="w-8 h-8" style={{ color: 'var(--accent-foreground)' }} />
+                          </div>
+                          <h2
+                            className="text-3xl md:text-4xl font-bold"
+                            style={{ fontFamily: 'M PLUS Rounded 1c', color: 'var(--color-text-default)' }}
+                          >
+                            {block.title}
+                          </h2>
+                          <p className="text-lg leading-relaxed" style={{ color: 'var(--color-text-default)' }}>
+                            {block.description}
+                          </p>
+                          <div>
+                            <Link to="/enroll">
+                              <Button className="gap-2" style={{ background: 'linear-gradient(90deg, var(--color-brand-primary), var(--color-accent))', color: 'var(--accent-foreground)' }}>
+                                {t('learn_more')}
+                                <ArrowRight className="w-4 h-4" />
+                              </Button>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Section - styled card with modern reveal animation */}
+      <section className="py-20" style={{ background: 'var(--color-bg-light)' }}>
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="scroll-reveal opacity-0 animate-fade-in-up">
+              <Card className="overflow-hidden border-0 shadow-2xl hover:shadow-2xl transform transition-transform duration-500 hover:-translate-y-1">
+                <div style={{ padding: '1px', background: 'linear-gradient(90deg, var(--color-brand-primary), var(--color-accent))' }}>
+                  <CardContent style={{ background: 'var(--color-bg-light)', padding: '2rem' }}>
+                    <div className="flex items-start gap-6">
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, var(--color-brand-primary), var(--color-accent))' }}>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-8 h-8" style={{ color: 'var(--accent-foreground)' }}>
+                            <path fill="currentColor" d="M12 2L2 7v6c0 5 4 9 10 9s10-4 10-9V7l-10-5z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-2xl md:text-3xl font-bold" style={{ fontFamily: 'M PLUS Rounded 1c', color: 'var(--color-brand-primary)' }}>
+                          {t('homepage.philosophy_title')}
+                        </h3>
+                        <p className="mt-4 text-lg leading-relaxed" style={{ color: 'var(--color-text-default)' }}>
+                          {t('homepage.philosophy_text')}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Logos / Credits Preview Section */}
+      <section className="py-12" style={{ background: 'var(--color-bg-light)' }}>
+        <div className="container mx-auto px-4">
+          {/* <div className="max-w-6xl mx-auto text-center mb-8">
+            <h3 className="text-2xl font-bold" style={{ fontFamily: 'M PLUS Rounded 1c', color: 'var(--color-brand-primary)' }}>
+              Featured Logos
+            </h3>
+            <p className="text-sm text-gray-600">A selection of logo designs that helped shape Kai's visual identity.</p>
+          </div> */}
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            <img src="/credit/img.png" className="w-full h-32 object-contain p-3 bg-white rounded-md shadow-sm" alt="logo 1" />
+            <img src="/credit/img (2).png" className="w-full h-32 object-contain p-3 bg-white rounded-md shadow-sm" alt="logo 2" />
+            <img src="/credit/img (3).png" className="w-full h-32 object-contain p-3 bg-white rounded-md shadow-sm" alt="logo 3" />
+            <img src="/credit/img (4).png" className="w-full h-32 object-contain p-3 bg-white rounded-md shadow-sm" alt="logo 4" />
+            <img src="/credit/img (5).png" className="w-full h-32 object-contain p-3 bg-white rounded-md shadow-sm" alt="logo 5" />
+          </div>
+
+          {/* <div className="text-center mt-6">
+            <Link to="/credits">
+              <Button className="gap-2" style={{ background: 'linear-gradient(90deg, var(--color-brand-primary), var(--color-accent))', color: 'var(--accent-foreground)' }}>
+                View Full Credits
+              </Button>
+            </Link>
+          </div> */}
+        </div>
+      </section>
+    </div >
+  );
+}

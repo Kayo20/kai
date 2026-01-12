@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "events": "Eventos",
+    "enroll": "Inscribirse",
+    "contact": "Contacto",
+    "terms": "Términos y Condiciones"
+  },
+  "header": {
+    "manageAccount": "Gestionar Cuenta"
+  },
+  "footer": {
+    "linkedin": "LinkedIn"
+  },
+  "homepage": {
+    "block1_title": "Ayude a sus clientes a proteger su negocio",
+    "block1_text": "Identificación exhaustiva de riesgos combinada con una gestión proactiva estratégica para mejorar la resiliencia empresarial y crear valor sostenible a largo plazo.",
+    "block2_title": "¿Qué es Kai?",
+    "block2_text": "Dirigido a pequeñas y medianas empresas. Kai proporciona a sus clientes 3 pilares fundamentales para una práctica exitosa.",
+    "block3_1_title": "Kit listo para usar",
+    "block3_1_text": "Para construir una consultoría de sostenibilidad y cumplimiento.",
+    "block3_2_title": "Centro de Datos",
+    "block3_2_text": "Un Centro de Competencias y Computación de Datos mutualizado, para garantizar calidad y bajo costo.",
+    "block3_3_title": "Alianza de Confianza",
+    "block3_3_text": "Expertos confiables y profesionales para compartir conocimientos de vanguardia y brindar capacitación.",
+    "our_story_title": "NUESTRA HISTORIA",
+    "our_story_text": "Kai es una alianza de profesionales altamente experimentados con más de 80 años de experiencia combinada en consultoría de cumplimiento, contabilidad, auditoría y sostenibilidad. Nuestro equipo multilingüe e internacional está dedicado a fortalecer su práctica proporcionando nuevas habilidades y competencias alineadas con las mejores prácticas de la industria y los estándares internacionales más recientes.",
+    "philosophy_title": "Nuestra Filosofía",
+    "philosophy_text": "Kai se nombra con intención, derivado del término japonés 改, que significa 'Renovar' o 'Cambiar'. Encapsula el progreso y el impulso hacia adelante. El nombre Kai aparece en varias palabras japonesas como Sekai (mundo), Kaigai (extranjero) y especialmente Kaizen: la filosofía de mejoras incrementales continuas que impulsan resultados positivos significativos en las operaciones comerciales. En esencia, Kai le permite ayudar a sus clientes a gestionar el riesgo de manera efectiva a través de cambios sutiles y mayores, aprovechando los estándares de cumplimiento reconocidos globalmente."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "enroll": "Enroll",
+    "contact": "Contact",
+    "terms": "Terms & Conditions"
+  },
+  "header": {
+    "manageAccount": "Manage Account"
+  },
+  "footer": {
+    "linkedin": "LinkedIn"
+  },
+  "homepage": {
+    "block1_title": "Help your clients protect their business",
+    "block1_text": "Thorough risk identification combined with strategic proactive management to enhance business resilience and drive sustainable long-term value creation.",
+    "block2_title": "What is Kai?",
+    "block2_text": "Aimed at Small & Medium Size Practices. Designed for Small & Medium Size Enterprises. Kai provides their clients with 3 fundamental pillars for a successful practice.",
+    "block3_1_title": "Ready-to-use Kit",
+    "block3_1_text": "To build a sustainability consultancy and compliance practice.",
+    "block3_2_title": "Data Centre",
+    "block3_2_text": "A mutualised Data Computing and Competencies Centre, to ensure quality and low cost.",
+    "block3_3_title": "Trusted Alliance",
+    "block3_3_text": "Reliable and professional experts to share cutting-edge knowledge and provide training.",
+    "our_story_title": "OUR STORY",
+    "our_story_text": "Kai is an alliance of highly experienced professionals with more than 80 years of combined expertise in compliance consulting, accounting, auditing, and sustainability. Our multilingual and international team is dedicated to strengthening your practice by providing new skills and competencies aligned with the most recent industry best practices and international standards.",
+    "philosophy_title": "Our Philosophy",
+    "philosophy_text": "Kai is named with intention, drawing from the Japanese term 改, which signifies 'Renew' or 'Change.' It embodies progress and forward momentum. The name Kai appears in several Japanese words such as Sekai (world), Kaigai (overseas), and especially Kaizen—the philosophy of continuous incremental improvements that drive significant positive outcomes across business operations. At its core, Kai empowers you to assist your clients in managing risk effectively through both subtle and major changes, leveraging globally recognised compliance standards."
+  },
+  "credits": {
+    "yumi": {
+      "title": "Meet Yumi",
+      "subtitle": "Our amazing brand designer who brought Kai's vibrant identity to life",
+      "about_title": "About Yumi",
+      "quote": "\"I absolutely love discovering and crafting logos. Even when travelling abroad, I eagerly snap photos of stunning logos I find. I'm passionate about simple and flat logo designs. My superpower is capturing clients' ideas through engaging conversations and interviews, then bringing those visions to life in my designs!\"",
+      "background_title": "Background & Expertise",
+      "bio_1": "Born in Akita in 1995, Yumi graduated from Akita Prefectural University and initially worked as a banker before pursuing her passion for logo design. This unique career transition brought fresh perspectives and professional discipline to her creative work.",
+      "bio_2": "Today, Yumi specializes in creating logos and brand identities across a variety of industries, including corporate logos, store logos, and service logos. Her work is characterized by minimalist aesthetics, clean lines, and a deep understanding of brand storytelling.",
+      "contribution_title": "Her Contribution to Kai",
+      "contribution_text": "Yumi's creative vision was instrumental in developing Kai's vibrant brand identity. Through thoughtful conversations about our mission and values, she crafted a visual language that perfectly captures our commitment to sustainability, innovation, and knowledge sharing. We're incredibly grateful for her talent and dedication!",
+      "role_label": "Role",
+      "location_label": "Location",
+      "born_label": "Born",
+      "background_label": "Background",
+      "born_value": "1995",
+      "role_value": "Logo & Brand Designer",
+      "location_value": "Akita, Japan",
+      "background_value": "Banking → Design"
+    }
+  }
+}
