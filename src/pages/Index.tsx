@@ -59,7 +59,7 @@ export default function HomePage() {
       icon: Zap,
       title: t('homepage.feature2_title'),
       description: t('homepage.feature2_text'),
-      image: 'https://images.unsplash.com/photo-1454165833767-0275080187a1?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
     },
     {
       icon: Zap,

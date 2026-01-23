@@ -11,6 +11,8 @@ exports.handler = async function (event, context) {
     'MAIL_PASSWORD',
     'MAIL_FROM',
     'CONTACT_RECEIVER',
+    'VITE_SUPABASE_URL',
+    'VITE_SUPABASE_ANON_KEY',
   ];
 
   const result = {};
