@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { Save, Search, Menu, X, LayoutDashboard, Users, Settings, BarChart3, TrendingUp, ChevronDown, Lock, ShieldCheck } from 'lucide-react';
+import { Save, Search, Menu, X, LayoutDashboard, Users, Settings, BarChart3, TrendingUp, ChevronDown, Lock, ShieldCheck, LogOut } from 'lucide-react';
 import getSupabaseClient from '@/lib/supabase';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
@@ -58,6 +58,13 @@ export default function AdminPage() {
             setLoginError(true);
             toast.error('Invalid password');
         }
+    };
+
+    const handleLogout = () => {
+        setIsAuthenticated(false);
+        sessionStorage.removeItem('admin_authenticated');
+        setPassword('');
+        toast.info('Logged out successfully');
     };
 
     async function fetchKeys() {
@@ -243,14 +250,24 @@ export default function AdminPage() {
                                 />
                             </div>
 
-                            {/* User Dropdown */}
-                            <button className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
-                                <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
-                                    <Users className="w-4 h-4 text-gray-600" />
+                            {/* User Profile (Static for now) */}
+                            <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-50 border border-gray-100">
+                                <div className="w-8 h-8 rounded-full bg-[#0B4C6A]/10 flex items-center justify-center">
+                                    <Users className="w-4 h-4 text-[#0B4C6A]" />
                                 </div>
-                                <span className="text-sm font-medium text-gray-700 hidden sm:block">Seesam</span>
-                                <ChevronDown className="w-4 h-4 text-gray-500" />
-                            </button>
+                                <span className="text-sm font-medium text-gray-700 hidden sm:block">Admin</span>
+                            </div>
+
+                            {/* Logout Button */}
+                            <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={handleLogout}
+                                className="text-gray-500 hover:text-red-600 hover:bg-red-50 transition-colors"
+                            >
+                                <LogOut className="w-4 h-4 md:mr-2" />
+                                <span className="hidden md:inline">Logout</span>
+                            </Button>
                         </div>
                     </div>
                 </header>

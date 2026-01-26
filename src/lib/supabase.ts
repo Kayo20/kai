@@ -7,13 +7,19 @@ export function getSupabaseClient(): SupabaseClient | null {
   const url = import.meta.env.VITE_SUPABASE_URL;
   const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
+  // Check specifically for optional/missing env vars
   if (!url || !anonKey || url === 'undefined' || anonKey === 'undefined') {
+    if (import.meta.env.DEV) {
+      console.warn('Supabase credentials missing in development');
+    } else {
+      console.error('Supabase credentials missing in production. Check VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY');
+    }
     return null;
   }
 
   try {
     if (typeof url !== 'string' || !url.startsWith('http')) {
-      console.error('Invalid VITE_SUPABASE_URL');
+      console.error(`Invalid VITE_SUPABASE_URL: ${url}`);
       return null;
     }
     supabase = createClient(url, anonKey);
