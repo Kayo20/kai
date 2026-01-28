@@ -2,7 +2,7 @@
   command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
-  environment = { SECRETS_SCAN_OMIT_KEYS = "VITE_CONTACT_EMAIL", VITE_SUPABASE_URL = "https://yzilrdxggwbioqgvtxrc.supabase.co", VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6aWxyZHhnZ3diaW9xZ3Z0eHJjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc4OTk3OTQsImV4cCI6MjA4MzQ3NTc5NH0.0J2c_aW74qbp-bnubzZb51RAlKQhqijWtEB5PNhkoXc", ALLOW_INSECURE_CAPTCHA = "false", EVENTBRITE_TOKEN = "QYNIT4ORQDHFPKXZXM5GSZ" }
+  environment = { SECRETS_SCAN_OMIT_KEYS = "VITE_CONTACT_EMAIL", VITE_SUPABASE_URL = "https://yzilrdxggwbioqgvtxrc.supabase.co", VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6aWxyZHhnZ3diaW9xZ3Z0eHJjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc4OTk3OTQsImV4cCI6MjA4MzQ3NTc5NH0.0J2c_aW74qbp-bnubzZb51RAlKQhqijWtEB5PNhkoXc", ALLOW_INSECURE_CAPTCHA = "false", EVENTBRITE_TOKEN = "YJZBF4W6RYW3X72CQSJR" }
 
  [dev]
   port = 8888

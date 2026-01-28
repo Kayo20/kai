@@ -1,10 +1,10 @@
-exports.handler = async function(event, context) {
+exports.handler = async function (event, context) {
   if (event.httpMethod !== 'GET') {
     return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
   }
 
-  // Accept either EVENTBRITE_TOKEN (preferred, personal OAuth token) or EVENTBRITE_CLIENT (legacy name)
-  const eventbriteToken = process.env.EVENTBRITE_TOKEN || process.env.EVENTBRITE_CLIENT;
+  // Accept either EVENTBRITE_TOKEN (preferred), EVENTBRITE_CLIENT, or fallback to hardcoded (for immediate fix)
+  const eventbriteToken = process.env.EVENTBRITE_TOKEN || process.env.EVENTBRITE_CLIENT || 'YJZBF4W6RYW3X72CQSJR';
   if (!eventbriteToken) {
     return { statusCode: 500, body: JSON.stringify({ error: 'Eventbrite API token not configured' }) };
   }
